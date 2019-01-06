@@ -5,15 +5,15 @@ using System.Web;
 
 namespace Test_Software.Classes
 {
-    public class Quciksort
+    public class QuickSort
     {
-        public static void QuickSort(int[] a)
+        public static void Sort(int[] a)
         {
-            QuickSort(a, 0, a.Length - 1);
+            Sort(a, 0, a.Length - 1);
         }
 
 
-        public static void QuickSort(int[] A, int left, int right)
+        public static void Sort(int[] A, int left, int right)
         {
             if (left > right || left < 0 || right < 0) return;
 
@@ -21,8 +21,8 @@ namespace Test_Software.Classes
 
             if (index != -1)
             {
-                QuickSort(A, left, index - 1);
-                QuickSort(A, index + 1, right);
+                Sort(A, left, index - 1);
+                Sort(A, index + 1, right);
             }
         }
 
